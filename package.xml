@@ -36,9 +36,6 @@
             <dir name="VarDump" role="php">
                 <file>interface.glade</file>
             </dir> 
-	    <dir name="tests">
-	       <file role="test">test1.php</file>
-	     </dir>
         </dir>
     </filelist>
    
