@@ -34,6 +34,8 @@
 *
 * thats it!!
 *
+* @see http://cvs.php.net/pear/Gtk_VarDump/examples/example.php
+*
 * @version    $Id$
 */
 class Gtk_VarDump {
@@ -393,6 +395,4 @@ $t->test = $GLOBALS;
 new GTK_VarDump($t,'test');
 */
 
-
-
-?>
+ 
