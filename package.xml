@@ -20,10 +20,12 @@
   
   
     <release>
-      <version>0.1</version>
-      <date>2003-01-21</date>
+      <version>0.2</version>
+      <date>2004-11-13</date>
       <notes>
-      	- first release
+      	minor feature update release
+        - size of arrays and length of strings added (Christian Weiske)
+        - example usage in CVS (url in VarDump.php) (Christian Weiske)
       </notes>
       <state>beta</state>
     </release>
