@@ -215,7 +215,7 @@ class Gtk_VarDump {
                 $col_b = get_class($node);
                 break;
             case 'array':
-                $col_b = 'array';
+                $col_b = 'array[' . count($node) . ']';
                 $col_a = $name;
                 break;
             default:
@@ -351,11 +351,14 @@ class Gtk_VarDump {
                 $widget->set_text('Object: '. get_class($node));
                 
                 $parts = array_keys(get_object_vars($node)); 
-                foreach($parts as $k) {
+                foreach ($parts as $k) {
                     switch (gettype($node->$k)) {
                         case 'object':
                         case 'array':
                             continue;
+                        case 'string':
+                            $this->_gtkList->append(array(' '.$k,' string['.strlen($node->$k) . ']',' '.$node->$k));
+                            break;
                         default:
                             $this->_gtkList->append(array(' '.$k,gettype($node->$k),' '.$node->$k));
                     }
@@ -364,11 +367,14 @@ class Gtk_VarDump {
             case 'array':
                 $widget->set_text('Array');
                 $parts = array_keys($node); 
-                foreach($parts as $k) {
+                foreach ($parts as $k) {
                     switch (gettype($node[$k])) {
                         case 'object':
                         case 'array':
                             continue;
+                        case 'string':
+                            $this->_gtkList->append(array(' '.$k,' string['.strlen($node[$k]) . ']',' '.$node[$k]));
+                            break;
                         default:
                             $this->_gtkList->append(array(' '.$k,' '.gettype($node[$k]),' '.$node[$k]));
                     }
