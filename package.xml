@@ -21,11 +21,11 @@
   
     <release>
       <version>0.1</version>
-      <date>2003-01-09</date>
+      <date>2003-01-21</date>
       <notes>
       	- first release
       </notes>
-      <state>stable</state>
+      <state>beta</state>
     </release>
      
      
@@ -45,11 +45,11 @@
   <changelog>
   <release>
       <version>0.1</version>
-      <date>2003-01-09</date>
+      <date>2003-01-21/date>
       <notes>
       	- first release
       </notes>
-      <state>stable</state>
+      <state>beta</state>
     </release>
      
 
