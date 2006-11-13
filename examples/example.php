@@ -3,8 +3,7 @@
 *   Example for Gtk_VarDump
 *   @author Christian Weiske
 */
-#require_once('Gtk/VarDump.php');
-require_once('../VarDump.php');
+require_once 'Gtk/VarDump.php';
 
 
 class Test
@@ -13,13 +12,13 @@ class Test
     var $foo    = 'bar';
     var $self   = null;
     var $server = null;
-    
+
     function Test()
     {
         $this->self   =& $this;
         $this->server =& $_SERVER; 
     }
-    
+
     function doNothing() 
     {
         //we're doing nothing here
